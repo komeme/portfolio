@@ -60,6 +60,9 @@ workflows:
   build_and_deploy:
     jobs:
       - build
+          branches:
+            ignore:
+              - /gh-pages/
       - deploy:
           requires:
             - build
